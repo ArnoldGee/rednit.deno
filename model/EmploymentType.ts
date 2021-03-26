@@ -7,5 +7,3 @@ export type EmploymentType =
   | "Internship"
   | "Apprenticeship"
   | "Dual FP"
-
-export type EmploymentTypes = Array<EmploymentType>

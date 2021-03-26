@@ -1,3 +1,4 @@
+import { EmploymentType } from './../EmploymentType.ts';
 import { Sector } from './../Sector.ts';
 import { WorkExperience } from "../experience/WorkExperience.ts";
 import { Education } from "../experience/Education.ts";
@@ -9,6 +10,7 @@ export interface Applicant extends ProfileBasic {
   surname: string;
   education: Education[];
   WorkExperiences: WorkExperience[];
+  employmentTypes: EmploymentType[]
   sectors: Sector[]
   skills: string[];
 }
