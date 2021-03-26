@@ -8,8 +8,5 @@ export const employmentTypes: EmploymentTypes = [
   "Contract",
   "Internship",
   "Apprenticeship",
-  "Formación Profesional Dual",
-  "Funcionario",
-  "Interino",
-  "Contrato por obra o servicio",
+  "Dual FP",
 ];

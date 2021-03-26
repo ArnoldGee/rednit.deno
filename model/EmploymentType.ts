@@ -6,9 +6,6 @@ export type EmploymentType =
   | "Contract"
   | "Internship"
   | "Apprenticeship"
-  | "Formación Profesional Dual"
-  | "Funcionario"
-  | "Interino"
-  | "Contrato por obra o servicio";
+  | "Dual FP"
 
 export type EmploymentTypes = Array<EmploymentType>
