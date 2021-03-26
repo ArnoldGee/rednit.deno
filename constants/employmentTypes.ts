@@ -1,6 +1,6 @@
-import { EmploymentTypes } from "./../model/EmploymentType.ts";
+import { EmploymentType } from "./../model/EmploymentType.ts";
 
-export const employmentTypes: EmploymentTypes = [
+export const employmentTypes: EmploymentType[] = [
   "Part-time",
   "Full-time",
   "Self-employed",
