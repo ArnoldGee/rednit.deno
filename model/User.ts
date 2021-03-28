@@ -1,5 +1,6 @@
+import { MongoId } from './util/MongoId.ts';
 export interface User {
-  _id: string;
+  _id: MongoId;
   name: string;
   email: string;
   password: string;

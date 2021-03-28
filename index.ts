@@ -3,6 +3,10 @@ import { userCreate, userDelete, userGet, userUpdate } from "./routes/user.ts";
 import { welcome } from "./routes/welcome.ts";
 import { Application, Router } from "./deps.ts";
 import { getEmploymentTypes, getSectors } from "./routes/constants.ts";
+import "https://deno.land/x/dotenv/load.ts";
+import {envConfig} from './deps.ts'
+
+envConfig();
 
 const router = new Router();
 const app = new Application();

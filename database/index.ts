@@ -1,10 +1,9 @@
-import { MongoDBConnector, Database } from "../deps.ts";
-import "https://deno.land/x/dotenv/load.ts";
-import {envConfig} from '../deps.ts'
+import { MongoClient } from "../deps.ts";
 
-const connector = new MongoDBConnector({
-  uri: 'mongodb://127.0.0.1:27017',
-  database: 'test',
-});
+const client = new MongoClient();
 
-const db = new Database(connector);
+const uri: string = Deno.env.get("MONGO_URI") as string;
+console.log(uri);
+await client.connect(uri);
+
+export const db = client.database("test");
