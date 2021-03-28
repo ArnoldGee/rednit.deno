@@ -1,15 +1,21 @@
+import { userCreate, userDelete, userGet, userUpdate } from "./routes/user.ts";
 
-import { Application, Router, RouterContext } from "https://deno.land/x/oak/mod.ts";
+import { welcome } from "./routes/welcome.ts";
+import { Application, Router } from "./deps.ts";
+import { getEmploymentTypes, getSectors } from "./routes/constants.ts";
 
-const router = new Router()
-const app    = new Application();
-const PORT   = 8080;
+const router = new Router();
+const app = new Application();
+const PORT = 8080;
 
-router.get('/', (ctx: RouterContext) => {
-  ctx.response.body = "Hello World"
-})
+router
+  .get("/", welcome)
+  .get("/constants/employmentTypes", getEmploymentTypes)
+  .get("/constants/sectors", getSectors)
+  .post("/user/create", userCreate);
 
 app.use(router.routes());
 app.use(router.allowedMethods());
 
+console.log('Listening at port ' + PORT)
 await app.listen({ port: PORT });
